@@ -1,8 +1,8 @@
 import React from "react";
-import { Carousel, Col, Container, Row, Alert } from "react-bootstrap";
+import { Carousel, Col, Container, Row } from "react-bootstrap";
 import items from "../data/menu.json";
 import DishComments from "./DishComments";
-import NotificationAlert from "./AlertNotification";
+import NotificAlert from "./AlertNotific";
 import ReservationForm from "./ReservationForm";
 import Reservations from "./Reservations";
 
@@ -73,7 +73,7 @@ class Home extends React.Component {
             {!this.state.selectedDish.comments[0].rating === 5 ? (
               <ReservationForm />
             ) : (
-              <NotificationAlert />
+              <NotificAlert />
             )}
           </Col>
         </Row>

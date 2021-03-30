@@ -1,11 +1,11 @@
 import React from "react";
-import { Alert, ListGroup, Spinner } from "react-bootstrap";
+import { Alert, Row, Col, Spinner, Container, Card } from "react-bootstrap";
 import { format, parseISO } from "date-fns";
 
 // render will be called ONCE after the constructor (for displaying the initial state of your component)
 // it will be called AGAIN every time there is a change in the state or in the props
 
-class Reservations extends React.Component {
+export default class Reservations extends React.Component {
   constructor(props) {
     super(props);
     // this is really the first method invoked upon component construction
@@ -89,25 +89,27 @@ class Reservations extends React.Component {
           )}
 
           {this.state.reservations.map((res) => (
-            <ListGroup key={res._id}>
-              <ListGroup.Item>
-                <p>
-                  From: {res.name}, for {res.numberOfPersons} people,
-                </p>
-                {/* <p>at {res.dateTime}</p> */}
-                <p>
-                  at {format(parseISO(res.dateTime), "yyyy-MMM-dd | HH:mm")}
-                </p>
-              </ListGroup.Item>
-            </ListGroup>
+            <Container>
+              <Row key={res._id}>
+                <Col xs={12} md={3} lg={2}>
+                  <Card>
+                    <p>
+                      From: {res.name}, for {res.numberOfPersons} people,
+                    </p>
+                    {/* <p>at {res.dateTime}</p> */}
+                    <p>
+                      at {format(parseISO(res.dateTime), "yyyy-MMM-dd | HH:mm")}
+                    </p>
+                  </Card>
+                </Col>
+              </Row>
+            </Container>
           ))}
         </div>
       </>
     );
   }
 }
-
-export default Reservations;
 
 // whenever you need to fetch data for your component
 // you'll need a class based component
