@@ -69,7 +69,7 @@ export default class Home extends React.Component {
           </Col>
         </Row>
         <Row className="justify-content-center mt-5">
-          <Col xs={12} md={4} lg={3}>
+          <Col xs={12}>
             {!this.state.selectedDish.comments[0].rating === 5 ? (
               <ReservationForm />
             ) : (
