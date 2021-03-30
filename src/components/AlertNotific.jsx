@@ -1,7 +1,7 @@
-import { Alert, Button } from "react-bootstrap";
 import { useState } from "react";
+import { Alert, Button } from "react-bootstrap";
 
-export default NotificAlert = () => {
+const NotificAlert = () => {
   const [show, setShow] = useState(true);
   return (
     <Alert show={show} variant="danger">
@@ -16,3 +16,5 @@ export default NotificAlert = () => {
     </Alert>
   );
 };
+
+export default NotificAlert;

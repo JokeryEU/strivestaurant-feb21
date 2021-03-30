@@ -21,8 +21,8 @@ export default class DishComments extends Component {
         {this.props.selectedDish && (
           <ListGroup>
             <h2>Comments for {this.props.selectedDish.name}</h2>
-            {this.props.selectedDish.comments.map((c) => (
-              <ListGroup.Item key={c.id}>{c.comment}</ListGroup.Item>
+            {this.props.selectedDish.comments.map((text) => (
+              <ListGroup.Item key={text.id}>{text.comment}</ListGroup.Item>
             ))}
           </ListGroup>
         )}

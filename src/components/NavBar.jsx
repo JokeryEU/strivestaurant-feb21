@@ -4,7 +4,7 @@ import React from "react";
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    console.log("I'm the constructor in the console");
+    console.log("I'm the constructor displaying in the console");
   }
   render() {
     return (

@@ -89,10 +89,10 @@ export default class Reservations extends React.Component {
           )}
 
           {this.state.reservations.map((res) => (
-            <Container>
-              <Row key={res._id}>
-                <Col xs={12} md={3} lg={2}>
-                  <Card>
+            <Container key={res._id}>
+              <Row>
+                <Col>
+                  <Card xs={12} md={4} lg={3}>
                     <p>
                       From: {res.name}, for {res.numberOfPersons} people,
                     </p>

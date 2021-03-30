@@ -8,7 +8,7 @@ import { Button, Form } from "react-bootstrap";
 // dateTime
 // specialRequests
 
-class ReservationForm extends React.Component {
+export default class ReservationForm extends React.Component {
   state = {
     reservation: {
       name: "",
@@ -168,5 +168,3 @@ class ReservationForm extends React.Component {
     );
   }
 }
-
-export default ReservationForm;

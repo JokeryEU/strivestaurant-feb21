@@ -9,7 +9,7 @@ import Reservations from "./Reservations";
 // functional components are great to work with and they can use the props
 // but if we want to use the state, we need a CLASS BASED component
 
-class Home extends React.Component {
+export default class Home extends React.Component {
   state = {
     selectedDish: items[0],
   };
@@ -64,12 +64,12 @@ class Home extends React.Component {
           </Col>
         </Row>
         <Row className="justify-content-center mt-5">
-          <Col xs={8}>
+          <Col xs={12} md={4} lg={3}>
             <Reservations h3="This is Reservation" />
           </Col>
         </Row>
         <Row className="justify-content-center mt-5">
-          <Col xs={8}>
+          <Col xs={12} md={4} lg={3}>
             {!this.state.selectedDish.comments[0].rating === 5 ? (
               <ReservationForm />
             ) : (
@@ -78,7 +78,7 @@ class Home extends React.Component {
           </Col>
         </Row>
         <Row className="justify-content-center mt-5">
-          <Col xs={8}>
+          <Col xs={12} md={4} lg={3}>
             {this.state.selectedDish.name !== "Amatriciana" && (
               <DishComments selectedDish={this.state.selectedDish} />
             )}
@@ -88,5 +88,3 @@ class Home extends React.Component {
     );
   }
 }
-
-export default Home;
