@@ -65,7 +65,7 @@ export default class Home extends React.Component {
         </Row>
         <Row className="justify-content-center mt-5">
           <Col xs={12} md={4} lg={3}>
-            <Reservations h3="This is Reservation" />
+            <Reservations h3="These are the reservations" />
           </Col>
         </Row>
         <Row className="justify-content-center mt-5">

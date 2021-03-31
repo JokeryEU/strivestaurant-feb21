@@ -89,19 +89,13 @@ export default class Reservations extends React.Component {
           )}
 
           {this.state.reservations.map((res) => (
-            <Row key={res._id}>
-              <Col>
-                <Card xs={12} md={4} lg={3}>
-                  <p>
-                    From: {res.name}, for {res.numberOfPersons} people,
-                  </p>
-                  {/* <p>at {res.dateTime}</p> */}
-                  <p>
-                    at {format(parseISO(res.dateTime), "yyyy-MMM-dd | HH:mm")}
-                  </p>
-                </Card>
-              </Col>
-            </Row>
+            <Card key={res._id} xs={12} md={4} lg={3}>
+              <p>
+                From: {res.name}, for {res.numberOfPersons} people,
+              </p>
+              {/* <p>at {res.dateTime}</p> */}
+              <p>at {format(parseISO(res.dateTime), "yyyy-MMM-dd | HH:mm")}</p>
+            </Card>
           ))}
         </div>
       </>
